@@ -1,4 +1,4 @@
-import sorters.stableSorts.InsertionSorter;
+import sorters.stableSorts.MergeSorter;
 
 public class Main {
 
@@ -12,9 +12,12 @@ public class Main {
 //        selectionSorter.sort(dataToBeSort1);
 
 
-        InsertionSorter insertionSorter=new InsertionSorter();
-        insertionSorter.sort(dataToBeSort1);
+//        InsertionSorter insertionSorter=new InsertionSorter();
+//        insertionSorter.sort(dataToBeSort1);
 
+
+        MergeSorter mergeSorter=new MergeSorter();
+        mergeSorter.sort(dataToBeSort1);
 
         printArray(dataToBeSort1);
     }
