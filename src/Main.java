@@ -1,4 +1,4 @@
-import sorters.unstableSorts.SelectionSorter;
+import sorters.stableSorts.InsertionSorter;
 
 public class Main {
 
@@ -8,8 +8,13 @@ public class Main {
 
         int[] dataToBeSort1 = {10, 1, 20, 8, 13, 100, 55, 7, 19, 33};
 
-        SelectionSorter selectionSorter=new SelectionSorter();
-        selectionSorter.sort(dataToBeSort1);
+//        SelectionSorter selectionSorter=new SelectionSorter();
+//        selectionSorter.sort(dataToBeSort1);
+
+
+        InsertionSorter insertionSorter=new InsertionSorter();
+        insertionSorter.sort(dataToBeSort1);
+
 
         printArray(dataToBeSort1);
     }
