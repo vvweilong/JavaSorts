@@ -41,13 +41,7 @@ public class QuickSorter extends BaseSorter {
                 /**
                  * bug  出现两个相等的值并且与 标准值相等 会造成 重复 调换的死循环
                  * */
-//                if (dataArray[pointLeft] == dataArray[pointRight]) {//如果两个值相等
-//                    System.out.println("出现两个相等的值并且与 标准值相等 会造成 重复 调换的死循环");
-//                    破坏 对称形式造成的 死循环
-//                    fixArray(dataArray,pointLeft);
-//                } else {
                 exChangeValue(dataArray, pointLeft++, pointRight);
-//                }
                 printArray(dataArray);
             }
             System.out.println();
@@ -58,20 +52,6 @@ public class QuickSorter extends BaseSorter {
         }
     }
 
-    /**
-     * 修复 因为呈现对称状态造成的 栈溢出
-     */
-    private void fixArray(int[] array, int a) {
-        //将右边最近的一个  不相等的 且小于 当前位置的值进行交换
-        int b = a + 1;
-        while (array[b] >= array[a]) {
-            b++;
-        }
-
-
-        exChangeValue(array, a, b);
-
-    }
 
 
     /*交换两个位置的值*/
